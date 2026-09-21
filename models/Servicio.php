@@ -40,7 +40,7 @@ class Servicio {
     public function buscarPorId(int $idServicio): ?array{
 
         $stmt = $this->pdo->prepare(
-            "SELECT id_servicio, nombre duracion_min, precio, activo
+            "SELECT id_servicio, nombre, duracion_min, precio, activo
             FROM Servicios
             WHERE id_servicio= :id"
         );
